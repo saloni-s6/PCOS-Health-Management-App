@@ -1,0 +1,68 @@
+/* Header.css */
+
+/* General Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem; /* Adjusted padding for spacing */
+    background-color: #af7cf7;
+    color: rgb(38, 36, 36);
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .logo-img {
+    height: 100px; 
+    width: auto;
+    object-fit: cover;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 2rem; /* Adjusted space between links */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-buttons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .signup-btn,
+  .login-btn {
+    background-color: #03dac5;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .signup-btn:hover,
+  .login-btn:hover {
+    background-color: #018786;
+  }
+  
