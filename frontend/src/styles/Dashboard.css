@@ -1,0 +1,181 @@
+.dashboard-container {
+    padding: 2rem 4rem;
+    background-color: var(--background);
+    min-height: 90vh;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  
+  .dashboard-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+  }
+  
+  .dashboard-summary {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .summary-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .summary-icon {
+    background-color: rgba(255, 182, 193, 0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+  }
+  
+  .summary-content h3 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+  
+  .summary-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  
+  .summary-value span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-light);
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .dashboard-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: var(--text);
+  }
+  
+  .dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-icon {
+    background-color: rgba(255, 182, 193, 0.2);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+  }
+  
+  .dashboard-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dashboard-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+  }
+  
+  .dashboard-tips {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dashboard-tips h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+  
+  .tips-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .tip-card {
+    background-color: rgba(255, 182, 193, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  
+  .tip-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+  
+  .tip-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 1024px) {
+    .dashboard-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 1.5rem;
+    }
+    
+    .dashboard-summary {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .tips-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }

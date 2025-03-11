@@ -1,0 +1,333 @@
+.period-tracker-container {
+    padding: 2rem 4rem;
+    background-color: var(--background);
+    min-height: 90vh;
+  }
+  
+  .period-tracker-header {
+    margin-bottom: 2rem;
+  }
+  
+  .period-tracker-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  
+  .period-tracker-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+  }
+  
+  .period-tracker-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .calendar-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .calendar-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--text);
+  }
+  
+  .month-nav-btn {
+    background-color: rgba(255, 182, 193, 0.2);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text);
+    transition: background-color 0.3s ease;
+  }
+  
+  .month-nav-btn:hover {
+    background-color: rgba(255, 182, 193, 0.4);
+  }
+  
+  .calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .calendar-weekdays div {
+    font-weight: 600;
+    color: var(--text-light);
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .calendar-day:hover:not(.empty) {
+    background-color: rgba(255, 182, 193, 0.2);
+  }
+  
+  .calendar-day.empty {
+    cursor: default;
+  }
+  
+  .calendar-day.period-day {
+    background-color: rgba(255, 105, 180, 0.3);
+    color: var(--text);
+  }
+  
+  .calendar-day.today {
+    border: 2px solid var(--primary);
+    font-weight: 600;
+  }
+  
+  .calendar-day.selected {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .calendar-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+  
+  .legend-color.period-day {
+    background-color: rgba(255, 105, 180, 0.3);
+  }
+  
+  .legend-color.today {
+    border: 2px solid var(--primary);
+  }
+  
+  .legend-color.selected {
+    background-color: var(--primary);
+  }
+  
+  .tracking-form-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .tracking-form-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+  
+  .tracking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .flow-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .flow-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .flow-btn.active {
+    background-color: var(--primary);
+    color: white;
+    border-color: var(--primary);
+  }
+  
+  .symptoms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .symptom-tag {
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .symptom-tag.active {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .mood-select {
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  
+  .save-btn {
+    background-color: var(--button-bg);
+    color: var(--text);
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+  
+  .save-btn:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+  }
+  
+  .select-date-prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 300px;
+    color: var(--text-light);
+    text-align: center;
+  }
+  
+  .period-insights {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .period-insights h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+  
+  .insights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .insight-card {
+    background-color: rgba(255, 182, 193, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .insight-card h4 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 0.75rem;
+  }
+  
+  .insight-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  
+  @media (max-width: 1024px) {
+    .period-tracker-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .insights-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .period-tracker-container {
+      padding: 1.5rem;
+    }
+    
+    .insights-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .symptoms-grid {
+      grid-template-columns: 1fr;
+    }
+  }

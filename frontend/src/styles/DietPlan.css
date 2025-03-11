@@ -1,0 +1,232 @@
+.diet-plan-container {
+    padding: 2rem 4rem;
+    background-color: var(--background);
+    min-height: 90vh;
+  }
+  
+  .diet-plan-header {
+    margin-bottom: 2rem;
+  }
+  
+  .diet-plan-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+  
+  .diet-plan-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+  }
+  
+  .diet-plan-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .diet-preferences {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .diet-preferences h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+  
+  .diet-type-selector {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .diet-type-selector label {
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  .diet-select {
+    padding: 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .dietary-preferences {
+    margin-bottom: 2rem;
+  }
+  
+  .dietary-preferences h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+  
+  .preferences-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .preference-tag {
+    padding: 0.75rem;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .preference-tag.active {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .diet-tips {
+    background-color: rgba(255, 182, 193, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  
+  .diet-tips h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+  }
+  
+  .diet-tips ul {
+    padding-left: 1.5rem;
+  }
+  
+  .diet-tips li {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+  
+  .meal-plan {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .meal-plan h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+  }
+  
+  .meal-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .meal-category {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .meal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    background-color: rgba(255, 182, 193, 0.1);
+  }
+  
+  .meal-header h4 {
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  
+  .meal-options {
+    padding: 1.5rem;
+  }
+  
+  .meal-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .meal-option:last-child {
+    margin-bottom: 0;
+  }
+  
+  .meal-option p {
+    line-height: 1.5;
+  }
+  
+  .grocery-list {
+    background-color: rgba(255, 182, 193, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  
+  .grocery-list h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+  
+  .grocery-list > p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .grocery-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .grocery-category h5 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+  
+  .grocery-category ul {
+    padding-left: 1.5rem;
+  }
+  
+  .grocery-category li {
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .diet-plan-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .grocery-categories {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .diet-plan-container {
+      padding: 1.5rem;
+    }
+    
+    .preferences-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grocery-categories {
+      grid-template-columns: 1fr;
+    }
+  }

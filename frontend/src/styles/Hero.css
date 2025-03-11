@@ -1,0 +1,66 @@
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    padding: 2rem 4rem;
+    background-color: var(--background);
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    color: var(--text);
+    margin-bottom: 2rem;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .hero-buttons .btn {
+    font-size: 1.2rem;
+    padding: 12px 36px;
+  }
+  
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+  
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-buttons {
+      justify-content: center;
+    }
+  }

@@ -1,0 +1,148 @@
+.navbar {
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 4rem;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+  
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logo span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
+  }
+  
+  .logout-btn {
+    background-color: var(--button-bg);
+    color: var(--text);
+    border: none;
+    border-radius: 25px;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+  
+  .logout-btn:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+  }
+  
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text);
+  }
+  
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .mobile-menu a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+  
+  .mobile-login-btn, .mobile-signup-btn {
+    text-align: center;
+    padding: 0.75rem;
+    border-radius: 25px;
+    margin-top: 0.5rem;
+  }
+  
+  .mobile-login-btn {
+    background-color: transparent;
+    border: 1px solid var(--button-bg);
+  }
+  
+  .mobile-signup-btn, .mobile-logout-btn {
+    background-color: var(--button-bg);
+    color: var(--text);
+    border: none;
+    border-radius: 25px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
+  
+  @media (max-width: 1024px) {
+    .navbar {
+      padding: 1rem 2rem;
+    }
+    
+    .desktop-links {
+      display: none;
+    }
+    
+    .mobile-menu-button {
+      display: block;
+    }
+    
+    .mobile-menu {
+      display: flex;
+    }
+  }

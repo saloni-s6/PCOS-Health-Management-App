@@ -1,0 +1,6 @@
+{
+  "short_name": "PCOS Tracker",
+  "name": "CycleBloom",
+  "start_url": "/",
+  "display": "standalone"
+}
